@@ -34,9 +34,7 @@ body {
     var(--main-beige) 27.4%
   );
   color: black;
-  box-sizing: border-box;
   font-size: 14px;
-  min-height: 100vh;
 }
 
 a {
@@ -73,9 +71,11 @@ div > div {
    LAYOUT: GRID AREAS
    ============================= */
 body {
+  overflow-x: hidden;
+  position: relative;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: auto 1fr auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto auto;
 }
 
 /* =============================
@@ -115,53 +115,16 @@ main {
   display: flex;
 }
 
-#main-content {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  overflow: hidden;
-  flex: 1 1 auto;
-  min-height: 0;
-}
-
-#main-content > div {
-  flex: 1 1 0;
-  min-width: 0;
-}
-
-#main-content > div img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  max-width: 100%;
-}
-
-#read-more {
-  display: block;
-  font-weight: 700;
-}
-
 #additional {
-  display: flex;
-  padding: 8px;
-  justify-content: center;
-  align-items: center;
-  /* Sidebar width */
-  flex: 0 0 25%;
-}
-
-#additional-content {
   display: flex;
   flex-direction: column;
   gap: 8px;
   justify-content: center;
-  align-items: center;
+  flex: 0 0 25%;
   background-color: var(--light-beige);
-  width: 100%;
-  height: 100%;
   border-radius: 16px;
-  padding: 16px;
+  align-self: flex-start;
+  min-height: 100%;
 }
 
 #main-display {
@@ -173,8 +136,6 @@ main {
   background-color: var(--deep-blue);
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
-  overflow-y: auto;
-  overflow-x: hidden;
 }
 
 #description {
@@ -220,7 +181,6 @@ nav a {
   height: 910px;
   transform: rotate(-64.151deg);
   aspect-ratio: 48/79;
-  overflow: hidden;
   filter: blur(4px);
 }
 
@@ -270,4 +230,31 @@ footer .social-icon {
   font-style: italic;
   text-decoration: underline;
   color: white;
+}
+
+#main-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  overflow: hidden;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+#main-content > div {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+#main-content > div img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  max-width: 100%;
+}
+
+#read-more {
+  display: block;
+  font-weight: 700;
 }
