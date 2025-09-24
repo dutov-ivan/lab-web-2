@@ -35,6 +35,7 @@ body {
   );
   color: black;
   font-size: 14px;
+  min-height: 100vh;
 }
 
 a {
@@ -68,21 +69,32 @@ div > div {
 }
 
 /* =============================
-   LAYOUT: GRID AREAS
+   LAYOUT: AREAS
    ============================= */
 body {
   overflow-x: hidden;
   position: relative;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: auto auto auto auto auto auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#header-content-nav {
+  flex: 1;
+  display: flex;
+  padding: 0;
+}
+
+#header-content {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
 }
 
 /* =============================
    HEADER
    ============================= */
 header {
-  grid-column: 1 / -2;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -110,9 +122,9 @@ header {
    MAIN AREA
    ============================= */
 main {
-  grid-column: 1 / -2;
-  grid-row: 2 / -2;
   display: flex;
+  flex: 1 1 auto;
+  min-height: 0;
 }
 
 #additional {
@@ -148,7 +160,7 @@ main {
    NAVIGATION
    ============================= */
 nav {
-  grid-row: 1 / -2;
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -197,7 +209,7 @@ nav li:hover {
    FOOTER
    ============================= */
 footer {
-  grid-column: 1 / -1;
+  flex: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
