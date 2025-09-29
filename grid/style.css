@@ -87,12 +87,10 @@ header {
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
-  justify-content: space-between;
   padding: 24px 96px 16px 96px;
 }
 
 #company-heading {
-  grid-column: 1;
   display: grid;
   grid-auto-flow: column;
   align-items: center;
@@ -105,6 +103,11 @@ header {
   width: 100px;
 }
 
+#company-heading .quote {
+  font-size: 32px;
+  max-width: 256px;
+}
+
 /* =============================
    MAIN AREA
    ============================= */
@@ -113,7 +116,6 @@ main {
   grid-row: 2 / -2;
   display: grid;
   grid-template-columns: 1fr 3fr;
-  gap: 16px;
 }
 
 #additional {
@@ -150,26 +152,25 @@ main {
    ============================= */
 nav {
   grid-row: 1 / -2;
-  display: flex;
+  display: grid;
   align-items: center;
-  justify-content: flex-end;
+  justify-items: end;
   padding: 16px;
 }
 
 nav ul {
   padding-top: 33%;
   list-style: none;
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 32px;
 }
 
-nav {
-  grid-row: 1 / -2;
-  display: grid;
-  align-items: center;
-  justify-items: end;
-  padding: 16px;
+nav a {
+  text-decoration: none;
+  color: var(--deep-blue);
+}
+
+#active-page {
   text-decoration: underline;
   color: var(--deep-blue);
 }
@@ -185,11 +186,12 @@ nav {
   filter: blur(4px);
 }
 
-nav ul {
-  padding-top: 33%;
-  list-style: none;
-  display: grid;
-  gap: 32px;
+nav li {
+  z-index: 10;
+}
+
+nav li:hover {
+  transform: scale(1.2);
   transition: 0.3s;
 }
 

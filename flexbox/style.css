@@ -79,7 +79,7 @@ body {
 }
 
 #header-content-nav {
-  flex: 1;
+  flex: 5;
   display: flex;
   padding: 0;
 }
@@ -95,6 +95,7 @@ body {
    HEADER
    ============================= */
 header {
+  flex: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -123,7 +124,7 @@ header {
    ============================= */
 main {
   display: flex;
-  flex: 1 1 auto;
+  flex: 4;
   min-height: 0;
 }
 
@@ -209,7 +210,7 @@ nav li:hover {
    FOOTER
    ============================= */
 footer {
-  flex: 0;
+  flex: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
