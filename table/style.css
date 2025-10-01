@@ -26,6 +26,10 @@ html {
   overflow-x: hidden;
 }
 
+table {
+  border-collapse: collapse;
+}
+
 body {
   font-family: "Inter", sans-serif;
   background: linear-gradient(
@@ -87,17 +91,17 @@ body {
    HEADER
    ============================= */
 
-.header {
-  padding: 24px 96px 16px 96px;
-}
-
-#company-heading table {
-  padding: 16px;
+#company-heading {
+  padding: 24px 0 16px 96px;
 }
 
 #company-heading img {
   height: 100px;
   width: 100px;
+}
+
+.heading-right-padding {
+  padding-right: 96px;
 }
 
 /* =============================
