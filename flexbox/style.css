@@ -95,7 +95,6 @@ body {
    HEADER
    ============================= */
 header {
-  flex: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -123,8 +122,8 @@ header {
    MAIN AREA
    ============================= */
 main {
+  height: 100%;
   display: flex;
-  flex: 4;
   min-height: 0;
 }
 
